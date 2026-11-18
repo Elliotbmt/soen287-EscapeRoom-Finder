@@ -1,0 +1,10 @@
+{
+  "name": "escape-room-finder",
+  "version": "1.0.0",
+  "description": "A beginner-friendly escape room finder with session-based authentication",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}
