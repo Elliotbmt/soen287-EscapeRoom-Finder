@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <!-- Login form for existing Escape Room Finder accounts. -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in | Escape Room Finder</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/auth.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Escape Room <strong>Finder</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/">Explore rooms</a>
+        <a class="button button-small" href="/register">Create account</a>
+      </nav>
+    </header>
+    <main class="auth-main">
+      <section class="auth-card" aria-labelledby="login-title">
+        <a class="back-link" href="/">← Back to the rooms</a>
+        <p class="eyebrow">Your next adventure is waiting</p>
+        <h1 id="login-title">Welcome back.</h1>
+        <p class="auth-intro">Log in to visit your dashboard.</p>
+        <p class="form-message" id="form-message" role="alert" aria-live="assertive"></p>
+        <form id="login-form" data-endpoint="/api/auth/login">
+          <div class="form-field">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" minlength="3" maxlength="20" required>
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" required>
+          </div>
+          <button class="button auth-submit" type="submit">Log in <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="auth-switch">New to the search? <a href="/register">Create an account</a></p>
+      </section>
+      <aside class="auth-aside">
+        <span class="aside-mark" aria-hidden="true">✦</span>
+        <p class="eyebrow">The clock is ticking</p>
+        <h2>One more clue.<br>One step closer.</h2>
+        <p>Your dashboard is ready when you are. The room is waiting.</p>
+      </aside>
+    </main>
+    <footer class="site-footer auth-footer">
+      <p>Made for curious minds and close-knit crews.</p>
+      <a href="/">Back to Escape Room Finder</a>
+    </footer>
+  </body>
+</html>

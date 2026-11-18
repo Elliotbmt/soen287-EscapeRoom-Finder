@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <!-- Registration form for new Escape Room Finder accounts. -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create an account | Escape Room Finder</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/auth.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Escape Room <strong>Finder</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/">Explore rooms</a>
+        <a class="nav-link" href="/login">Log in</a>
+      </nav>
+    </header>
+    <main class="auth-main">
+      <section class="auth-card" aria-labelledby="register-title">
+        <a class="back-link" href="/">← Back to the rooms</a>
+        <p class="eyebrow">A better night out awaits</p>
+        <h1 id="register-title">Join the search.</h1>
+        <p class="auth-intro">Create an account to save your place for what's next.</p>
+        <p class="form-message" id="form-message" role="alert" aria-live="assertive"></p>
+        <form id="register-form" data-endpoint="/api/auth/register">
+          <div class="form-field">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" minlength="3" maxlength="20" pattern="[A-Za-z0-9_]{3,20}" required>
+            <small>3–20 letters, numbers, or underscores.</small>
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+            <small>Choose at least 8 characters.</small>
+          </div>
+          <div class="form-field">
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+          </div>
+          <button class="button auth-submit" type="submit">Create account <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="/login">Log in</a></p>
+      </section>
+      <aside class="auth-aside">
+        <span class="aside-mark" aria-hidden="true">✦</span>
+        <p class="eyebrow">A little mystery goes a long way</p>
+        <h2>Bring your people.<br>We'll find the plot.</h2>
+        <p>From first-timers to puzzle pros, there's a room for every kind of crew.</p>
+      </aside>
+    </main>
+    <footer class="site-footer auth-footer">
+      <p>Made for curious minds and close-knit crews.</p>
+      <a href="/">Back to Escape Room Finder</a>
+    </footer>
+  </body>
+</html>
