@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <!-- Session-protected welcome page and future reviews placeholder. -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your dashboard | Escape Room Finder</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/auth.js" defer></script>
+  </head>
+  <body class="dashboard-page">
+    <header class="site-header">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Escape Room <strong>Finder</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="text-button" id="logout-button" type="button">Log out <span aria-hidden="true">↗</span></button>
+      </nav>
+    </header>
+    <main class="dashboard-main">
+      <section class="welcome-panel">
+        <p class="eyebrow">Your little corner of the mystery</p>
+        <h1>Welcome, <span id="welcome-username">friend</span>.</h1>
+        <p>It’s good to have you back. Your next great escape is out there.</p>
+      </section>
+      <section class="reviews-placeholder" aria-labelledby="reviews-title">
+        <div class="placeholder-icon" aria-hidden="true">✦</div>
+        <p class="eyebrow">Coming up</p>
+        <h2 id="reviews-title">Your reviews will live here.</h2>
+        <p>After your future escape-room adventures, this is where you’ll be able to share your thoughts.</p>
+      </section>
+      <p class="form-message dashboard-message" id="form-message" role="alert" aria-live="assertive"></p>
+    </main>
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Escape Room <strong>Finder</strong></span>
+      </a>
+      <p>Made for curious minds and close-knit crews.</p>
+      <span class="footer-year">Montreal · 2026</span>
+    </footer>
+  </body>
+</html>
