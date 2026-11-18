@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <!-- Public landing page with searchable escape room listings. -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find a memorable escape room for your next night out.">
+    <title>Escape Room Finder | Find your next great escape</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/rooms.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Escape Room Finder home">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Escape Room <strong>Finder</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#rooms">Explore rooms</a>
+        <a class="nav-link" href="/login">Log in</a>
+        <a class="button button-small" href="/register">Join the search</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Your next great story starts here</p>
+          <h1>Find your<br><span>way out.</span></h1>
+          <p class="hero-description">Pick a team, choose your kind of thrill, and discover an escape room worth talking about.</p>
+          <a class="button" href="#rooms">Find your room <span aria-hidden="true">↘</span></a>
+          <p class="hero-note">12 original rooms · One unforgettable night</p>
+        </div>
+        <div class="hero-art" role="img" aria-label="Illustration of a glowing golden keyhole in a midnight-blue door">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="door-frame">
+            <div class="door-panel">
+              <span class="door-number">09</span>
+              <span class="keyhole" aria-hidden="true"></span>
+              <span class="door-knob" aria-hidden="true"></span>
+            </div>
+          </div>
+          <span class="art-star star-one" aria-hidden="true">✦</span>
+          <span class="art-star star-two" aria-hidden="true">✧</span>
+          <div class="art-caption"><span class="caption-line"></span><span>THE ADVENTURE IS YOURS</span></div>
+        </div>
+      </section>
+
+      <section class="listing-section" id="rooms">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The shortlist</p>
+            <h2>Choose your escape.</h2>
+          </div>
+          <p class="section-intro">Find a room that fits your crew, your mood, and your budget.</p>
+        </div>
+
+        <form class="filter-panel" id="room-filters" role="search">
+          <div class="search-field filter-field">
+            <label for="room-search">Search rooms</label>
+            <input id="room-search" name="search" type="search" placeholder="Try a theme, room, or venue">
+          </div>
+          <div class="filter-field">
+            <label for="group-size">Group size</label>
+            <select id="group-size" name="groupSize">
+              <option value="">Any group</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" name="difficulty">
+              <option value="">Any level</option>
+              <option>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="experience">Experience</label>
+            <select id="experience" name="experience">
+              <option value="">Any experience</option>
+              <option>Beginner</option>
+              <option>Some experience</option>
+              <option>Experienced</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="scare-level">Scare level</label>
+            <select id="scare-level" name="scareLevel">
+              <option value="">Any scare level</option>
+              <option>None</option>
+              <option>Mild</option>
+              <option>Spooky</option>
+              <option>Intense</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="theme">Theme</label>
+            <select id="theme" name="theme">
+              <option value="">Any theme</option>
+              <option>Adventure</option>
+              <option>Fantasy</option>
+              <option>Historical</option>
+              <option>Horror</option>
+              <option>Mystery</option>
+              <option>Science Fiction</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="budget">Max. price per person</label>
+            <select id="budget" name="budget">
+              <option value="">Any budget</option>
+              <option value="30">$30</option>
+              <option value="35">$35</option>
+              <option value="40">$40</option>
+            </select>
+          </div>
+        </form>
+
+        <div class="results-heading">
+          <p id="results-count" aria-live="polite">Loading rooms…</p>
+          <button class="text-button" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="room-grid" id="room-list" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No rooms match those filters yet. Try changing a few.</p>
+      </section>
+
+      <section class="closing-banner">
+        <div>
+          <p class="eyebrow">Round up your crew</p>
+          <h2>Good stories start<br>with a locked door.</h2>
+        </div>
+        <a class="button button-light" href="/register">Make your account <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>Escape Room <strong>Finder</strong></span>
+      </a>
+      <p>Made for curious minds and close-knit crews.</p>
+      <span class="footer-year">Montreal · 2026</span>
+    </footer>
+  </body>
+</html>
