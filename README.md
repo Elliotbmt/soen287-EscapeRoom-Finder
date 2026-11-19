@@ -24,6 +24,7 @@ files for storage.
 
 4. Open `.env` and change `SESSION_SECRET` to any long random string.
    Keep this file private. It is already in `.gitignore`.
+   node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 5. Start the server:
 
    node server.js
